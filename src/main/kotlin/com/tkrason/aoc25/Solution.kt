@@ -17,18 +17,24 @@ interface Solution {
 	fun solvePart1(input: String)
 	fun solvePart2(input: String)
 
-	fun solve() {
+	fun solve(
+		warmUpBeforeMeasure: Int = 0,
+		measureTimeRepeating: Int = 1
+	) {
 		val part1Input = getPart1Input()
+		// warm up part 1
+		repeat(warmUpBeforeMeasure) { solvePart1(part1Input) }
 
-		//warm up part 1
-		repeat(5) { solvePart1(part1Input) }
-		val part1Duration = measureTime { solvePart1(part1Input) }
+		val part1Duration = measureTime {
+			repeat(measureTimeRepeating) { solvePart1(part1Input) }
+		}
 
 		val part2Input = getPart2Input()
-
 		// warm up part 2
-		repeat(5) { solvePart2(part2Input) }
-		val part2Duration = measureTime { solvePart2(part2Input) }
+		repeat(warmUpBeforeMeasure) { solvePart2(part2Input) }
+		val part2Duration = measureTime {
+			repeat(measureTimeRepeating) { solvePart2(part2Input)  }
+		}
 
 		logger.info("--- $day stats ---")
 		logger.info("part 1 took: $part1Duration")
