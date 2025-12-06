@@ -4,16 +4,10 @@ import com.tkrason.aoc25.solutions.Day1
 import com.tkrason.aoc25.solutions.Day2
 import com.tkrason.aoc25.solutions.Day3
 import com.tkrason.aoc25.solutions.Day4
+import com.tkrason.aoc25.solutions.Day5
 
 fun main() {
-	Aoc25Days.DAY_4.getSolution().solve(
-		warmUpBeforeMeasure = 500,
-		measureTimeRepeating = 500,
-	)
-
-//	Aoc25Days
-//		.entries
-//		.forEach { it.solve() }
+	Aoc25Days.DAY_5.getSolution().solve()
 }
 
 fun Aoc25Days.getSolution() = when (this) {
@@ -21,4 +15,5 @@ fun Aoc25Days.getSolution() = when (this) {
 	Aoc25Days.DAY_2 -> Day2()
 	Aoc25Days.DAY_3 -> Day3()
 	Aoc25Days.DAY_4 -> Day4()
+	Aoc25Days.DAY_5 -> Day5()
 }
