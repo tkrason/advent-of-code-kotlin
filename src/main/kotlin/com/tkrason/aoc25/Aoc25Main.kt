@@ -8,7 +8,10 @@ import com.tkrason.aoc25.solutions.Day5
 import com.tkrason.aoc25.solutions.Day6
 
 fun main() {
-	Aoc25Days.DAY_6.getSolution().solve()
+	Aoc25Days.DAY_2.getSolution().solve(
+		warmUpBeforeMeasure = 5,
+		measureTimeRepeating = 1
+	)
 }
 
 fun Aoc25Days.getSolution() = when (this) {
