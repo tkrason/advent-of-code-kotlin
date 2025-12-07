@@ -10,7 +10,9 @@ enum class Aoc25Days {
 	DAY_3,
 	DAY_4,
 	DAY_5,
-	DAY_6;
+	DAY_6,
+	DAY_7,
+	;
 }
 
 interface Solution {
