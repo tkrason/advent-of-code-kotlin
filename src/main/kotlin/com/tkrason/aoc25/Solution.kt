@@ -12,6 +12,7 @@ enum class Aoc25Days {
 	DAY_5,
 	DAY_6,
 	DAY_7,
+	DAY_8,
 	;
 }
 
